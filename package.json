@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-     "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "fluent-ffmpeg": "^2.1.3",
@@ -16,6 +16,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.27",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -50,29 +50,29 @@ const outputFormats = [
 ];
 
   return (
-    <form
-      action={async (formData: FormData) => {
-        setError(null);
-        setIsLoading(true);
-        try {
-          const file = formData.get("file") as File;
-          const format = formData.get("format") as string;
-          if (!file || !format) throw new Error("File or format missing");
+<form
+  action={async (formData: FormData) => {
+    setError(null);
+    setIsLoading(true);
+    try {
+      if (!file) throw new Error("No file selected");
+      const format = formData.get("format") as string;
+      if (!format) throw new Error("Format missing");
 
-          const convertedBlob = await convertFile(file, format);
-          const url = URL.createObjectURL(convertedBlob);
-          const link = document.createElement("a");
-          link.href = url;
-          link.download = `converted.${format}`;
-          link.click();
-          URL.revokeObjectURL(url);
-        } catch (e) {
-          setError((e as Error).message || "An unknown error occurred");
-        } finally {
-          setIsLoading(false);
-        }
-      }}
-    >
+      const convertedBlob = await convertFile(file, format);
+      const url = URL.createObjectURL(convertedBlob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `converted.${format}`;
+      link.click();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      setError((e as Error).message || "An unknown error occurred");
+    } finally {
+      setIsLoading(false);
+    }
+  }}
+>
     <div>
         <label htmlFor="file">Select File:</label>
         <input
