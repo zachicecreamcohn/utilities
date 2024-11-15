@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Autocomplete, AutocompleteItem } from "@nextui-org/react";
 import { convertFile } from "@/app/actions/convertFile";
 
 export default function Converter() {
