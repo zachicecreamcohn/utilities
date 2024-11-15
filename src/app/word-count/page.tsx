@@ -7,7 +7,7 @@ export default function WordCount() {
     const [clipboardText, setClipboardText] = useState('');
     const [clipboardWordCount, setClipboardWordCount] = useState(0);
 
-    const handleTextChange = (event) => {
+    const handleTextChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setText(event.target.value);
         setWordCount(event.target.value.split(' ').filter(Boolean).length);
     }
