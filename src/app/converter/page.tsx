@@ -74,7 +74,7 @@ const outputFormats = [
         }
       }}
     >
-      <div>
+    <div>
         <label htmlFor="file">Select File:</label>
         <input
           id="file"
@@ -106,7 +106,7 @@ const outputFormats = [
       {error && <p style={{ color: "red" }}>{error}</p>}
       {isLoading && <p>Converting file, please wait...</p>}
 
-      <button type="submit" disabled={isLoading}>
+      <button type="submit" disabled={isLoading} >
         Convert
       </button>
     </form>

@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* For now, avoid using Tailwind CSS because it's simpler to just use simple plain CSS */
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
 
 :root {
   --background: #ffffff;
