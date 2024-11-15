@@ -14,6 +14,10 @@ export default function Home() {
                 <td><Link href="/converter">File Converter</Link></td>
                 <td>A simple file converter (ffmpeg wrapper)</td>
             </tr>
+            <tr>
+                <td><Link href="/word-count">Word Counter</Link></td>
+                <td></td>
+            </tr>
         </tbody>
     </table>
 
