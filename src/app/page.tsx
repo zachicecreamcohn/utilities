@@ -18,6 +18,10 @@ export default function Home() {
                 <td><Link href="/word-count">Word Counter</Link></td>
                 <td></td>
             </tr>
+            <tr>
+                <td><Link href="/api-tester">API Tester</Link></td>
+                <td>Fetch API sandbox</td>
+            </tr>
         </tbody>
     </table>
 
